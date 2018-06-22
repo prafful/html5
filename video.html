@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello World With HTML5</h1>
+    <h3>Video and Audio Element</h3>
+    <video id="dashcam" width="320"  controls  muted>
+            <source src="001.mp4" type="video/mp4">
+          
+   </video>
+   <br>
+   <button onclick="playVideo()">Play</button>
+   <button onclick="pauseVideo()">Pause</button>
+   <button onclick="increaseWidth()">Big</button>
+   <button onclick="decreaseWidth()">Small</button>
+   <button onclick="reset()">Reset</button>
+
+<script>
+    var dashcamvideo = document.getElementById("dashcam")
+
+    playVideo = function(){
+        dashcamvideo.play()
+        if(!dashcamvideo.paused){
+            console.log("Video is playing!!!")
+        }
+    }
+
+    pauseVideo = function(){
+        dashcamvideo.pause()
+    }
+
+    increaseWidth=function(){
+        dashcamvideo.width=640
+    }
+
+    decreaseWidth = function(){
+        dashcamvideo.width=160  
+    }
+
+    reset = function(){
+        dashcamvideo.width = dashcamvideo.videoWidth
+        dashcamvideo.muted = false
+        dashcamvideo.volume = 1
+    }
+
+  
+</script>
+
+</body>
+</html>
