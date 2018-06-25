@@ -1,0 +1,22 @@
+body{
+    background-color: lightpink;
+    color: indianred
+}
+
+h3{
+   color: whitesmoke;    
+}
+
+video{
+    /*border-radius: 10px; 
+    border: 2px solid pink;
+    box-shadow: 2px 3px 3px currentColor;*/
+}
+
+h1{
+    background-color: #8e8e8e;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zd…VjdCB3aWR0aD0nMTAwJScgaGVpZ2h0PScxMDAlJyBmaWxsPSd1cmwoI2wpJy8+Cjwvc3ZnPg==);
+    color: white;
+    position: relative;
+    padding: 2rem;
+}
