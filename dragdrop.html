@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>HTML5 Drag and Drop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        #dragsource {
+            width: 150px;
+            height: 157px;
+            border: 5px dotted red;
+            position: absolute;
+        }
+        #dragtarget {
+            width: 150px;
+            height: 157px;
+            border: 5px dotted red;
+            margin-left:350px;  
+        }
+
+    </style>
+</head>
+<body>
+    <h3>Drag and Drop</h3>
+
+    <div id="dragsource">
+        <img id="myimage" src="logo.png" draggable="true" width="150" height="150" ondragstart="dragMe(event)">
+    </div>
+
+    <div id="dragtarget" ondrop="dropMe(event)" ondragover="dragOver(event)">
+
+    </div>
+    <script>
+        function dragMe(e){
+            console.log("dragMe Started")
+            e.dataTransfer.setData("mydata", e.target.id)
+        }
+
+        function dropMe(e){
+            e.preventDefault()
+            console.log("dropMe Started")
+            var temp = e.dataTransfer.getData("mydata")
+            e.target.appendChild(document.getElementById(temp))  
+            console.log("Appended to dragtarget")  
+
+        }
+
+        function dragOver(e){
+            e.preventDefault()
+            console.log("Drop is in process")  
+        }
+
+    </script>
+</body>
+</html>
